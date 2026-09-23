@@ -176,7 +176,7 @@ public class EnforcementListener implements Listener {
     public void onPotionApplied(EntityPotionEffectEvent event) {
         if (!(event.getEntity() instanceof Player p)) return;
         if (event.getCause() != Cause.POTION_DRINK && event.getCause() != Cause.POTION_SPLASH
-                && event.getCause() != Cause.POTION_LINGERING) return;
+                && event.getCause() != Cause.AREA_EFFECT_CLOUD) return;
         if (event.getNewEffect() == null) return;
         if (!abilities.isProsperity(p)) return;
 
